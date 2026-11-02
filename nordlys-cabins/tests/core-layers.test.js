@@ -34,7 +34,7 @@ test('discovery: a layer whose chapter does not match its folder is rejected', a
 test('discovery: the real layers folder loads, and the example layer is off by default', async () => {
   const { layers } = await buildApp();
   assert.equal(layers.some((l) => l.id === '00-example'), false);
-  const on = await buildApp({ env: { NORDLYS_EXAMPLE: '1' } });
+  const on = await buildApp({ upto: 0, env: { NORDLYS_EXAMPLE: '1' } });
   assert.equal(on.layers.some((l) => l.id === '00-example'), true);
 });
 
@@ -68,7 +68,7 @@ test('hooks: a second layer cannot silently take over a static path', async () =
 });
 
 test('example layer: every hook works', async () => {
-  const { app, ctx, tokenFor } = await buildApp({ env: { NORDLYS_EXAMPLE: '1' } });
+  const { app, ctx, tokenFor } = await buildApp({ upto: 0, env: { NORDLYS_EXAMPLE: '1' } });
   const home = await app.request('/');
   const homeHtml = await home.text();
   assert.match(homeHtml, /<meta name="nordlys-example" content="on">/);

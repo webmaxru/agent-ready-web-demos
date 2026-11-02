@@ -1,0 +1,22 @@
+/* Nordlys Cabins: what a person sees while an agent works on a form (Chapter 9).
+   Browsers without WebMCP ignore the rules with tool pseudo-classes. */
+form:tool-form-active {
+  outline: 3px solid var(--accent);
+  outline-offset: 6px;
+}
+
+button:tool-submit-active {
+  box-shadow: 0 0 0 4px var(--focus);
+}
+
+.agent-note {
+  display: none;
+}
+
+form:tool-form-active .agent-note,
+.agent-notice {
+  display: block;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid var(--accent);
+  background: var(--card);
+}

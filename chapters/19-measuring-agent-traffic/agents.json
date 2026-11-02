@@ -1,0 +1,121 @@
+{
+  "asOf": "2026-11-02",
+  "note": "User-agent tokens, purposes and IP range files as each operator documents them on 2 November 2026. Tokens are matched case-insensitively as substrings, so version numbers in the user agent do not matter.",
+  "agents": [
+    {
+      "token": "GPTBot",
+      "operator": "OpenAI",
+      "platform": "openai",
+      "purpose": "training",
+      "ipRanges": "openai-gptbot.json",
+      "docs": "https://platform.openai.com/docs/bots"
+    },
+    {
+      "token": "OAI-SearchBot",
+      "operator": "OpenAI",
+      "platform": "openai",
+      "purpose": "search",
+      "ipRanges": "openai-searchbot.json",
+      "docs": "https://platform.openai.com/docs/bots"
+    },
+    {
+      "token": "ChatGPT-User",
+      "operator": "OpenAI",
+      "platform": "openai",
+      "purpose": "user-fetch",
+      "ipRanges": "openai-chatgpt-user.json",
+      "docs": "https://platform.openai.com/docs/bots"
+    },
+    {
+      "token": "ClaudeBot",
+      "operator": "Anthropic",
+      "platform": "anthropic",
+      "purpose": "training",
+      "ipRanges": "anthropic-bots.json",
+      "docs": "https://support.claude.com/en/articles/8896518"
+    },
+    {
+      "token": "Claude-SearchBot",
+      "operator": "Anthropic",
+      "platform": "anthropic",
+      "purpose": "search",
+      "ipRanges": "anthropic-bots.json",
+      "docs": "https://support.claude.com/en/articles/8896518"
+    },
+    {
+      "token": "Claude-User",
+      "operator": "Anthropic",
+      "platform": "anthropic",
+      "purpose": "user-fetch",
+      "ipRanges": "anthropic-bots.json",
+      "docs": "https://support.claude.com/en/articles/8896518"
+    },
+    {
+      "token": "PerplexityBot",
+      "operator": "Perplexity",
+      "platform": "perplexity",
+      "purpose": "search",
+      "ipRanges": "perplexity-perplexitybot.json",
+      "docs": "https://docs.perplexity.ai/docs/resources/perplexity-crawlers"
+    },
+    {
+      "token": "Perplexity-User",
+      "operator": "Perplexity",
+      "platform": "perplexity",
+      "purpose": "user-fetch",
+      "ipRanges": "perplexity-user.json",
+      "docs": "https://docs.perplexity.ai/docs/resources/perplexity-crawlers"
+    },
+    {
+      "token": "Google-Agent",
+      "operator": "Google",
+      "platform": "google",
+      "purpose": "browsing-agent",
+      "ipRanges": "google-user-triggered-agents.json",
+      "docs": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-user-triggered-fetchers"
+    },
+    {
+      "token": "Googlebot",
+      "operator": "Google",
+      "platform": "google",
+      "purpose": "search",
+      "ipRanges": "google-common-crawlers.json",
+      "docs": "https://developers.google.com/crawling/docs/crawlers-fetchers/verify-google-requests"
+    },
+    {
+      "token": "bingbot",
+      "operator": "Microsoft",
+      "platform": "microsoft",
+      "purpose": "search",
+      "ipRanges": "microsoft-bingbot.json",
+      "docs": "https://www.bing.com/toolbox/bingbot.json"
+    }
+  ],
+  "referrers": {
+    "openai": [
+      "chatgpt.com",
+      "chat.openai.com"
+    ],
+    "anthropic": [
+      "claude.ai"
+    ],
+    "perplexity": [
+      "perplexity.ai"
+    ],
+    "google": [
+      "google.com",
+      "gemini.google.com"
+    ],
+    "microsoft": [
+      "bing.com",
+      "copilot.microsoft.com"
+    ]
+  },
+  "utmSources": {
+    "chatgpt.com": "openai"
+  },
+  "signatureAgents": {
+    "https://chatgpt.com": "openai",
+    "https://agent.bot.goog": "google"
+  }
+}

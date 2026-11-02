@@ -1,0 +1,58 @@
+{
+  "lighthouse": "13.6.0",
+  "note": "Minimum median score per audit over 3 runs. \"na\" = expected not applicable. Raise a number when a page improves, never lower one without a review.",
+  "pages": [
+    {
+      "path": "/",
+      "category": 1,
+      "audits": {
+        "agent-accessibility-tree": 1,
+        "webmcp-form-coverage": "na",
+        "webmcp-registered-tools": 1,
+        "webmcp-schema-validity": 1,
+        "cumulative-layout-shift": 0.9,
+        "llms-txt": 1,
+        "ard-schema": 1
+      }
+    },
+    {
+      "path": "/cabins",
+      "category": 0.9,
+      "audits": {
+        "agent-accessibility-tree": 1,
+        "webmcp-form-coverage": 1,
+        "webmcp-registered-tools": 1,
+        "webmcp-schema-validity": 0.5,
+        "cumulative-layout-shift": 0.9,
+        "llms-txt": 1,
+        "ard-schema": 1
+      }
+    },
+    {
+      "path": "/cabins/fjellro",
+      "category": 1,
+      "audits": {
+        "agent-accessibility-tree": 1,
+        "webmcp-form-coverage": 1,
+        "webmcp-registered-tools": 1,
+        "webmcp-schema-validity": 1,
+        "cumulative-layout-shift": 0.9,
+        "llms-txt": 1,
+        "ard-schema": 1
+      }
+    },
+    {
+      "path": "/book/fjellro?checkIn=2026-12-02&checkOut=2026-12-05&guests=3",
+      "category": 1,
+      "audits": {
+        "agent-accessibility-tree": 1,
+        "webmcp-form-coverage": 1,
+        "webmcp-registered-tools": 1,
+        "webmcp-schema-validity": 1,
+        "cumulative-layout-shift": 0.9,
+        "llms-txt": 1,
+        "ard-schema": 1
+      }
+    }
+  ]
+}

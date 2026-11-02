@@ -1,0 +1,10 @@
+{
+  "name": "ch14-connect-an-agent",
+  "private": true,
+  "type": "module",
+  "description": "Chapter 14: a command-line agent that connects to a Nordlys member account with OAuth 2.1 and PKCE",
+  "scripts": {
+    "start": "node agent.mjs"
+  },
+  "license": "MIT"
+}

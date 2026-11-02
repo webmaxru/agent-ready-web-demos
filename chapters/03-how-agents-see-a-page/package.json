@@ -1,0 +1,18 @@
+{
+  "name": "chapter-03-how-agents-see-a-page",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Chapter 3 of The Agent-Ready Web: the three views of a page and the agent accessibility rules",
+  "scripts": {
+    "views": "node three-views.mjs",
+    "axe": "node agent-axe.mjs"
+  },
+  "dependencies": {
+    "@playwright/test": "1.64.1",
+    "axe-core": "4.14.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

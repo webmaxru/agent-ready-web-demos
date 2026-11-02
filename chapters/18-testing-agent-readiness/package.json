@@ -1,0 +1,22 @@
+{
+  "name": "chapter-18-testing-agent-readiness",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Chapter 18 demo: an agent-readiness CI pipeline for Nordlys Cabins",
+  "license": "MIT",
+  "author": "Maxim Salnikov",
+  "type": "module",
+  "scripts": {
+    "check:readiness": "node scripts/readiness.mjs",
+    "check:schema": "node scripts/structured-data.mjs",
+    "check:robots": "node scripts/robots-llms.mjs",
+    "check:lighthouse": "node scripts/lighthouse-agentic.mjs",
+    "test:unit": "node --test test/*.test.mjs",
+    "test:e2e": "playwright test",
+    "eval:injection": "node evals/injection-eval.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.1",
+    "lighthouse": "13.6.0"
+  }
+}

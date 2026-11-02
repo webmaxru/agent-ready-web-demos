@@ -1,7 +1,7 @@
 {
   "name": "agent-ready-web-demos",
   "private": true,
-  "description": "Runnable demos for the book Building Agent-Ready Websites by Maxim Salnikov",
+  "description": "Runnable demos for the book The Agent-Ready Web by Maxim Salnikov",
   "license": "MIT",
   "author": "Maxim Salnikov",
   "repository": {

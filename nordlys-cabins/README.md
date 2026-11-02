@@ -1,6 +1,6 @@
 # Nordlys Cabins
 
-The running example of *Building Agent-Ready Websites*: a small cabin-rental
+The running example of *The Agent-Ready Web*: a small cabin-rental
 booking site, made agent-ready one layer per chapter.
 
 ```sh

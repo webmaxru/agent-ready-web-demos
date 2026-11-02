@@ -1,0 +1,352 @@
+{
+  "source": "https://schema.org/version/latest/schemaorg-current-https.jsonld",
+  "generated": "2026-11-02",
+  "classes": {
+    "Accommodation": [
+      "Place",
+      "Thing"
+    ],
+    "AggregateRating": [
+      "Rating",
+      "Intangible",
+      "Thing"
+    ],
+    "Answer": [
+      "Comment",
+      "CreativeWork",
+      "Thing"
+    ],
+    "BlogPosting": [
+      "SocialMediaPosting",
+      "Article",
+      "CreativeWork",
+      "Thing"
+    ],
+    "BreadcrumbList": [
+      "ItemList",
+      "Intangible",
+      "Thing"
+    ],
+    "EntryPoint": [
+      "Intangible",
+      "Thing"
+    ],
+    "FAQPage": [
+      "WebPage",
+      "CreativeWork",
+      "Thing"
+    ],
+    "GeoCoordinates": [
+      "StructuredValue",
+      "Intangible",
+      "Thing"
+    ],
+    "ItemList": [
+      "Intangible",
+      "Thing"
+    ],
+    "ListItem": [
+      "Intangible",
+      "Thing"
+    ],
+    "LocationFeatureSpecification": [
+      "PropertyValue",
+      "StructuredValue",
+      "Intangible",
+      "Thing"
+    ],
+    "LodgingReservation": [
+      "Reservation",
+      "Intangible",
+      "Thing"
+    ],
+    "Offer": [
+      "Intangible",
+      "Thing"
+    ],
+    "Organization": [
+      "Thing"
+    ],
+    "Person": [
+      "Thing"
+    ],
+    "PostalAddress": [
+      "ContactPoint",
+      "StructuredValue",
+      "Intangible",
+      "Thing"
+    ],
+    "PriceSpecification": [
+      "StructuredValue",
+      "Intangible",
+      "Thing"
+    ],
+    "QuantitativeValue": [
+      "StructuredValue",
+      "Intangible",
+      "Thing"
+    ],
+    "Question": [
+      "Comment",
+      "CreativeWork",
+      "Thing"
+    ],
+    "Rating": [
+      "Intangible",
+      "Thing"
+    ],
+    "ReserveAction": [
+      "PlanAction",
+      "OrganizeAction",
+      "Action",
+      "Thing"
+    ],
+    "Review": [
+      "CreativeWork",
+      "Thing"
+    ],
+    "UnitPriceSpecification": [
+      "PriceSpecification",
+      "StructuredValue",
+      "Intangible",
+      "Thing"
+    ],
+    "VacationRental": [
+      "LodgingBusiness",
+      "LocalBusiness",
+      "Organization",
+      "Thing",
+      "Place"
+    ],
+    "WebSite": [
+      "CreativeWork",
+      "Thing"
+    ]
+  },
+  "properties": {
+    "acceptedAnswer": [
+      "Question"
+    ],
+    "actionPlatform": [
+      "EntryPoint"
+    ],
+    "additionalType": [
+      "Thing"
+    ],
+    "address": [
+      "GeoCoordinates",
+      "GeoShape",
+      "Organization",
+      "Person",
+      "Place"
+    ],
+    "addressCountry": [
+      "DefinedRegion",
+      "GeoCoordinates",
+      "GeoShape",
+      "PostalAddress"
+    ],
+    "addressRegion": [
+      "DefinedRegion",
+      "PostalAddress"
+    ],
+    "aggregateRating": [
+      "Brand",
+      "CreativeWork",
+      "Event",
+      "Offer",
+      "Organization",
+      "Place",
+      "Product",
+      "Service"
+    ],
+    "amenityFeature": [
+      "Accommodation",
+      "FloorPlan",
+      "LodgingBusiness",
+      "Place"
+    ],
+    "author": [
+      "CreativeWork",
+      "Rating"
+    ],
+    "bed": [
+      "Accommodation",
+      "HotelRoom",
+      "Suite"
+    ],
+    "bestRating": [
+      "Rating"
+    ],
+    "checkinTime": [
+      "LodgingBusiness",
+      "LodgingReservation"
+    ],
+    "checkoutTime": [
+      "LodgingBusiness",
+      "LodgingReservation"
+    ],
+    "containsPlace": [
+      "Place"
+    ],
+    "dateModified": [
+      "CreativeWork",
+      "DataFeedItem"
+    ],
+    "datePublished": [
+      "Certification",
+      "CreativeWork"
+    ],
+    "description": [
+      "Thing"
+    ],
+    "geo": [
+      "Place"
+    ],
+    "headline": [
+      "CreativeWork"
+    ],
+    "identifier": [
+      "Thing"
+    ],
+    "image": [
+      "Thing"
+    ],
+    "item": [
+      "DataFeedItem",
+      "ListItem"
+    ],
+    "itemListElement": [
+      "ItemList"
+    ],
+    "latitude": [
+      "GeoCoordinates",
+      "Place"
+    ],
+    "logo": [
+      "Brand",
+      "Certification",
+      "Organization",
+      "Place",
+      "Product",
+      "Service"
+    ],
+    "longitude": [
+      "GeoCoordinates",
+      "Place"
+    ],
+    "mainEntity": [
+      "CreativeWork"
+    ],
+    "makesOffer": [
+      "Organization",
+      "Person"
+    ],
+    "maxValue": [
+      "MonetaryAmount",
+      "PropertyValue",
+      "PropertyValueSpecification",
+      "QuantitativeValue"
+    ],
+    "name": [
+      "Thing"
+    ],
+    "numberOfBedrooms": [
+      "Accommodation",
+      "ApartmentComplex",
+      "FloorPlan"
+    ],
+    "occupancy": [
+      "Accommodation",
+      "Apartment",
+      "HotelRoom",
+      "SingleFamilyResidence",
+      "Suite"
+    ],
+    "parentOrganization": [
+      "Organization"
+    ],
+    "position": [
+      "CreativeWork",
+      "ListItem"
+    ],
+    "potentialAction": [
+      "Thing"
+    ],
+    "price": [
+      "DonateAction",
+      "Offer",
+      "PriceSpecification",
+      "TradeAction"
+    ],
+    "priceCurrency": [
+      "DonateAction",
+      "Offer",
+      "PriceSpecification",
+      "Reservation",
+      "Ticket",
+      "TradeAction"
+    ],
+    "priceSpecification": [
+      "Demand",
+      "DonateAction",
+      "Offer",
+      "TradeAction"
+    ],
+    "publisher": [
+      "CreativeWork",
+      "FinancialIncentive"
+    ],
+    "ratingValue": [
+      "Rating"
+    ],
+    "result": [
+      "Action"
+    ],
+    "review": [
+      "Brand",
+      "CreativeWork",
+      "Event",
+      "Offer",
+      "Organization",
+      "Place",
+      "Product",
+      "Service"
+    ],
+    "reviewBody": [
+      "Review"
+    ],
+    "reviewCount": [
+      "AggregateRating"
+    ],
+    "reviewRating": [
+      "Review"
+    ],
+    "target": [
+      "Action"
+    ],
+    "text": [
+      "CreativeWork"
+    ],
+    "unitText": [
+      "PropertyValue",
+      "QuantitativeValue",
+      "TypeAndQuantityNode",
+      "UnitPriceSpecification"
+    ],
+    "url": [
+      "Thing"
+    ],
+    "urlTemplate": [
+      "EntryPoint"
+    ],
+    "value": [
+      "MonetaryAmount",
+      "PropertyValue",
+      "QuantitativeValue"
+    ],
+    "worstRating": [
+      "Rating"
+    ]
+  }
+}

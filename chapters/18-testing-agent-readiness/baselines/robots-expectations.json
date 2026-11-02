@@ -1,0 +1,40 @@
+{
+  "note": "What Chapter 4's crawler policy promises. A change here is a policy change: review it with whoever owns the policy.",
+  "access": [
+    {
+      "agent": "GPTBot",
+      "path": "/cabins/fjellro",
+      "allowed": false
+    },
+    {
+      "agent": "ClaudeBot",
+      "path": "/",
+      "allowed": false
+    },
+    {
+      "agent": "Claude-User",
+      "path": "/book/fjellro",
+      "allowed": true
+    },
+    {
+      "agent": "ChatGPT-User",
+      "path": "/account/agent-activity",
+      "allowed": false
+    },
+    {
+      "agent": "Googlebot",
+      "path": "/cabins/fjellro",
+      "allowed": true
+    },
+    {
+      "agent": "Googlebot",
+      "path": "/book/fjellro",
+      "allowed": false
+    },
+    {
+      "agent": "PerplexityBot",
+      "path": "/guide/packing-for-a-winter-cabin",
+      "allowed": true
+    }
+  ]
+}

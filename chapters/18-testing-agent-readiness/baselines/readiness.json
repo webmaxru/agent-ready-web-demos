@@ -1,0 +1,28 @@
+{
+  "level": 4,
+  "checks": {
+    "robotsTxt": "pass",
+    "sitemap": "pass",
+    "linkHeaders": "pass",
+    "dnsAid": "unableToCheck",
+    "markdownNegotiation": "pass",
+    "robotsTxtAiRules": "pass",
+    "contentSignals": "pass",
+    "webBotAuth": "neutral",
+    "mcpServerCard": "pass",
+    "a2aAgentCard": "neutral",
+    "agentSkills": "pass",
+    "webMcp": "pass",
+    "apiCatalog": "pass",
+    "oauthDiscovery": "pass",
+    "oauthProtectedResource": "pass",
+    "authMd": "fail",
+    "ard": "pass",
+    "personalAgentProtocol": "fail",
+    "x402": "neutral",
+    "mpp": "neutral",
+    "ucp": "neutral",
+    "acp": "neutral",
+    "ap2": "neutral"
+  }
+}

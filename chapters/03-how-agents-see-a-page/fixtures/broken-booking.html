@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Book a cabin (broken on purpose)</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 2rem; }
+  .muted { color: #b8b8b8; }
+  .fake-check { display: inline-block; width: 1rem; height: 1rem; border: 1px solid #333; }
+</style>
+</head>
+<body>
+<!-- Chapter 3 fixture: a booking form with common mistakes, one per line.
+     Run: node agent-axe.mjs fixtures/broken-booking.html (and again with --all). -->
+<h1>Book Fjellro</h1>
+<p class="muted">Prices include cleaning.</p>
+
+<form action="/book" method="post">
+  <p><label for="name">Full name</label> <input id="name" name="name" autocomplete="full-name"></p>
+  <p>Email <input name="email" type="email"></p>
+  <p>Guests <input name="guests" type="number" min="1" max="6" tabindex="3"></p>
+  <p><span class="fake-check" role="checkbox" tabindex="0"></span> I accept the terms</p>
+  <p><span role="buton" tabindex="0">Show prices</span></p>
+  <p><button type="submit"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 8h12M8 2v12" stroke="black"/></svg></button></p>
+</form>
+
+<div aria-hidden="true">
+  <a href="/terms">Cancellation terms</a>
+</div>
+
+<p><a href="/help"><img src="help.png"></a></p>
+
+<button type="button" aria-expanded="yes">More options</button>
+
+<div role="dialog">
+  <p>Your session is about to expire.</p>
+</div>
+</body>
+</html>

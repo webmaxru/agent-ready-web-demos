@@ -1,0 +1,12 @@
+{
+  "name": "appendix-b-reference",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Appendix B: check the files, robots.txt lines and headers of the reference tables against a running site",
+  "license": "MIT",
+  "scripts": {
+    "test:unit": "node --test",
+    "check": "node check-reference.mjs"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "ch15-signing-agent",
+  "private": true,
+  "type": "module",
+  "description": "Chapter 15: a test agent that signs requests with Web Bot Auth (Ed25519, RFC 9421) and serves its own key directory",
+  "scripts": {
+    "start": "node signer.mjs"
+  },
+  "license": "MIT"
+}
