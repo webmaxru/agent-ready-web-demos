@@ -1,0 +1,19 @@
+{
+  "note": "Demo accounts. Both passwords are nordlys-demo.",
+  "members": [
+    {
+      "id": "m-ingrid",
+      "name": "Ingrid Berg",
+      "email": "ingrid@nordlys.example",
+      "salt": "nordlys-ingrid",
+      "passwordHash": "906ea94c04aea7ffd7f30e45b9ddeeb1c2ca072e0ebd0b45e93de9451480ceb6"
+    },
+    {
+      "id": "m-ola",
+      "name": "Ola Nordmann",
+      "email": "ola@nordlys.example",
+      "salt": "nordlys-ola",
+      "passwordHash": "4fa9bdac3afcec09a124f2ae924c45ec2f9c8ba9625a573c35bad16edad2b4a2"
+    }
+  ]
+}

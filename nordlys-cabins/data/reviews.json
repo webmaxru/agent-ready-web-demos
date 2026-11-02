@@ -1,0 +1,54 @@
+{
+  "note": "Fictional reviews for the demo site.",
+  "reviews": [
+    {
+      "cabin": "lyngen-lysthus",
+      "author": "Hanne",
+      "date": "2026-03-02",
+      "rating": 5,
+      "text": "We saw the aurora on two of our three nights, once from the hot tub. The sauna by the shore is worth the cold walk."
+    },
+    {
+      "cabin": "lyngen-lysthus",
+      "author": "Tomasz",
+      "date": "2026-02-11",
+      "rating": 4,
+      "text": "Beautiful place and very warm inside. The road from the ferry is narrow in winter, so take your time."
+    },
+    {
+      "cabin": "fjellro",
+      "author": "Kari",
+      "date": "2026-02-20",
+      "rating": 5,
+      "text": "Skis on at the door, back for waffles by the fire. The drying room was a gift with two kids."
+    },
+    {
+      "cabin": "senja-sjobu",
+      "author": "Lukas",
+      "date": "2026-07-18",
+      "rating": 5,
+      "text": "Rowed out on a calm evening and caught dinner. The window table is the best seat on Senja."
+    },
+    {
+      "cabin": "reine-rorbu",
+      "author": "Emma",
+      "date": "2026-06-09",
+      "rating": 4,
+      "text": "Tiny but perfect for two. You hear the water under the floor at night."
+    },
+    {
+      "cabin": "hardanger-hytte",
+      "author": "Sigrid",
+      "date": "2026-05-21",
+      "rating": 5,
+      "text": "Came for the blossom, stayed for the long dinners. Our dog loved the fenced garden."
+    },
+    {
+      "cabin": "femund-skogkoie",
+      "author": "Jonas",
+      "date": "2026-09-14",
+      "rating": 5,
+      "text": "No signal, a wood stove and a lake full of stars. Bring a good head torch for the path."
+    }
+  ]
+}

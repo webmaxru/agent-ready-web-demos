@@ -1,0 +1,44 @@
+{
+  "faq": [
+    {
+      "id": "check-in",
+      "q": "When can I check in and out?",
+      "a": "Check-in is from 16:00 and check-out is by 11:00 on the day you leave. If you need a different time, write to us before you arrive and we will try to help."
+    },
+    {
+      "id": "linen",
+      "q": "Are bed linen and towels included?",
+      "a": "Yes. Every booking includes bed linen, towels and the final cleaning. The cleaning fee on each cabin page covers this."
+    },
+    {
+      "id": "cancellation",
+      "q": "Can I cancel a booking?",
+      "a": "You can cancel free of charge up to 14 days before check-in. Use the booking reference and the email address you booked with, or cancel from My bookings if you have an account. Later cancellations are not refunded."
+    },
+    {
+      "id": "pets",
+      "q": "Can I bring my dog?",
+      "a": "Dogs are welcome at Hardanger Hytte and Femund Skogkoie. Other cabins are pet-free, because some guests have allergies."
+    },
+    {
+      "id": "minimum-stay",
+      "q": "Is there a minimum stay?",
+      "a": "Most cabins have a minimum of two nights. Lyngen Lysthus and Hardanger Hytte have a minimum of three nights. The cabin page shows the rule for each cabin."
+    },
+    {
+      "id": "car",
+      "q": "Do I need a car?",
+      "a": "Not always. Reine Rorbu is within walking distance of the ferry and the bus. Fjellro can be reached by train and a local taxi. Femund Skogkoie and Lyngen Lysthus are easiest with a car."
+    },
+    {
+      "id": "northern-lights",
+      "q": "Will I see the northern lights?",
+      "a": "Nobody can promise that. The aurora needs dark, clear skies and some solar activity. In the north the best months are from late September to late March. Lyngen Lysthus, Senja Sjøbu and Reine Rorbu are all far enough north."
+    },
+    {
+      "id": "payment",
+      "q": "How do I pay?",
+      "a": "This is a demo site, so no payment is taken. On a real site the booking would end with a payment step."
+    }
+  ]
+}

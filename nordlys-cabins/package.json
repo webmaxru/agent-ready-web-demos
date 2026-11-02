@@ -1,0 +1,29 @@
+{
+  "name": "nordlys-cabins",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Nordlys Cabins: the running example of Building Agent-Ready Websites, made agent-ready one layer per chapter",
+  "license": "MIT",
+  "author": "Maxim Salnikov",
+  "type": "module",
+  "main": "server.js",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "start:legacy": "node server.js --variant=legacy",
+    "start:baseline": "node server.js --variant=legacy --upto=0",
+    "dev": "node --watch server.js",
+    "test": "npm run test:unit && npm run test:e2e",
+    "test:unit": "node --test \"tests/**/*.test.js\"",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "@hono/node-server": "2.1.6",
+    "hono": "4.13.16"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.1"
+  }
+}

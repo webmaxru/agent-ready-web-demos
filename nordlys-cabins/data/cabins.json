@@ -1,0 +1,243 @@
+{
+  "features": {
+    "fireplace": "Fireplace or wood stove",
+    "ski-in": "Ski tracks from the door",
+    "wifi": "Wi-Fi",
+    "drying-room": "Drying room",
+    "sauna": "Sauna",
+    "hot-tub": "Hot tub",
+    "aurora-view": "Northern lights view",
+    "boat": "Rowing boat",
+    "sea-view": "Sea view",
+    "pets-allowed": "Pets allowed",
+    "ev-charger": "EV charger",
+    "fjord-view": "Fjord view",
+    "off-grid": "Off-grid",
+    "lake-view": "Lake view"
+  },
+  "regions": [
+    {
+      "slug": "rondane",
+      "name": "Rondane"
+    },
+    {
+      "slug": "lyngen",
+      "name": "Lyngen"
+    },
+    {
+      "slug": "senja",
+      "name": "Senja"
+    },
+    {
+      "slug": "lofoten",
+      "name": "Lofoten"
+    },
+    {
+      "slug": "hardanger",
+      "name": "Hardanger"
+    },
+    {
+      "slug": "femunden",
+      "name": "Femunden"
+    }
+  ],
+  "cabins": [
+    {
+      "slug": "fjellro",
+      "name": "Fjellro",
+      "region": "Rondane",
+      "county": "Innlandet",
+      "summary": "A timber mountain cabin at the edge of Rondane National Park, with a fireplace and ski tracks from the door in winter.",
+      "description": [
+        "Fjellro means mountain calm, and that is the whole idea. The cabin sits on a south-facing slope above the tree line, with a wide view towards the Rondane peaks.",
+        "In winter, prepared cross-country tracks pass a few hundred metres below the terrace. In summer, marked trails lead into the national park. The living room has a fireplace, the kitchen is fully equipped, and the drying room takes care of wet boots."
+      ],
+      "maxGuests": 6,
+      "bedrooms": 3,
+      "beds": "2 double beds, 2 single beds",
+      "features": [
+        "fireplace",
+        "ski-in",
+        "wifi",
+        "drying-room"
+      ],
+      "nightlyRate": 2200,
+      "weekendRate": 2600,
+      "cleaningFee": 900,
+      "minNights": 2,
+      "geo": {
+        "latitude": 61.87,
+        "longitude": 9.77
+      },
+      "currency": "NOK",
+      "checkInTime": "16:00",
+      "checkOutTime": "11:00",
+      "image": "/images/fjellro.svg",
+      "imageAlt": "Timber cabin on a snowy slope with mountains behind it"
+    },
+    {
+      "slug": "lyngen-lysthus",
+      "name": "Lyngen Lysthus",
+      "region": "Lyngen",
+      "county": "Troms",
+      "summary": "A glass-fronted cabin facing the Lyngen Alps, built for watching the northern lights from the sofa or the hot tub.",
+      "description": [
+        "Lyngen Lysthus faces north-east across the fjord, away from village lights, so on a clear night from late autumn to early spring you can watch the sky without leaving the warmth.",
+        "There is a wood-fired sauna by the shore and a hot tub on the deck. The cabin is a 90-minute drive from Tromsø airport, including a short ferry crossing."
+      ],
+      "maxGuests": 4,
+      "bedrooms": 2,
+      "beds": "1 double bed, 2 single beds",
+      "features": [
+        "sauna",
+        "hot-tub",
+        "wifi",
+        "aurora-view"
+      ],
+      "nightlyRate": 3400,
+      "weekendRate": 3900,
+      "cleaningFee": 1200,
+      "minNights": 3,
+      "geo": {
+        "latitude": 69.58,
+        "longitude": 20.21
+      },
+      "currency": "NOK",
+      "checkInTime": "16:00",
+      "checkOutTime": "11:00",
+      "image": "/images/lyngen-lysthus.svg",
+      "imageAlt": "Glass-fronted cabin under green northern lights across a fjord"
+    },
+    {
+      "slug": "senja-sjobu",
+      "name": "Senja Sjøbu",
+      "region": "Senja",
+      "county": "Troms",
+      "summary": "A restored fisherman's sea house on the outer coast of Senja, with a small boat and the mountains right behind it.",
+      "description": [
+        "A sjøbu is a sea house, the building where fishermen once kept their boats and gear. This one has been rebuilt as a cabin with a kitchen, two bedrooms and a long table by the window.",
+        "Guests can use the rowing boat in calm summer weather. Life jackets are in the hallway. The outer coast is exposed, so check the forecast before any trip on the water."
+      ],
+      "maxGuests": 4,
+      "bedrooms": 2,
+      "beds": "2 double beds",
+      "features": [
+        "boat",
+        "fireplace",
+        "wifi",
+        "sea-view"
+      ],
+      "nightlyRate": 2400,
+      "weekendRate": 2800,
+      "cleaningFee": 900,
+      "minNights": 2,
+      "geo": {
+        "latitude": 69.39,
+        "longitude": 17.3
+      },
+      "currency": "NOK",
+      "checkInTime": "16:00",
+      "checkOutTime": "11:00",
+      "image": "/images/senja-sjobu.svg",
+      "imageAlt": "Red sea house on the shore with steep mountains behind"
+    },
+    {
+      "slug": "reine-rorbu",
+      "name": "Reine Rorbu",
+      "region": "Lofoten",
+      "county": "Nordland",
+      "summary": "A red rorbu on stilts above the water in Lofoten, small and simple, for two people who want to be close to the sea.",
+      "description": [
+        "Rorbuer are the traditional fishing cabins of Lofoten, built half on land and half over the water. This one has a double bed, a compact kitchen and a bench by the window where you can watch the boats come in.",
+        "It is small, so pack light. The ferry from Bodø to Moskenes and the bus along the E10 both stop within walking distance."
+      ],
+      "maxGuests": 2,
+      "bedrooms": 1,
+      "beds": "1 double bed",
+      "features": [
+        "sea-view",
+        "wifi"
+      ],
+      "nightlyRate": 1650,
+      "weekendRate": 1950,
+      "cleaningFee": 600,
+      "minNights": 2,
+      "geo": {
+        "latitude": 67.93,
+        "longitude": 13.09
+      },
+      "currency": "NOK",
+      "checkInTime": "16:00",
+      "checkOutTime": "11:00",
+      "image": "/images/reine-rorbu.svg",
+      "imageAlt": "Small red fishing cabin on stilts above calm water"
+    },
+    {
+      "slug": "hardanger-hytte",
+      "name": "Hardanger Hytte",
+      "region": "Hardanger",
+      "county": "Vestland",
+      "summary": "A big family cabin among fruit orchards above the Hardangerfjord, with room for eight, a garden for dogs and an EV charger.",
+      "description": [
+        "Hardanger is fruit country, and in May the slopes along the fjord turn white with apple and cherry blossom. The cabin stands in an old orchard with a fenced garden, so dogs are welcome.",
+        "There are four bedrooms, two bathrooms and a long dining table. A type 2 charger for electric cars is by the parking space, charged at cost."
+      ],
+      "maxGuests": 8,
+      "bedrooms": 4,
+      "beds": "3 double beds, 2 single beds",
+      "features": [
+        "pets-allowed",
+        "ev-charger",
+        "fireplace",
+        "wifi",
+        "fjord-view"
+      ],
+      "nightlyRate": 2900,
+      "weekendRate": 3300,
+      "cleaningFee": 1400,
+      "minNights": 3,
+      "geo": {
+        "latitude": 60.38,
+        "longitude": 6.72
+      },
+      "currency": "NOK",
+      "checkInTime": "16:00",
+      "checkOutTime": "11:00",
+      "image": "/images/hardanger-hytte.svg",
+      "imageAlt": "Large white cabin among blossoming fruit trees above a fjord"
+    },
+    {
+      "slug": "femund-skogkoie",
+      "name": "Femund Skogkoie",
+      "region": "Femunden",
+      "county": "Innlandet",
+      "summary": "An off-grid forest cabin by lake Femunden, with a wood stove, solar lights and no road for the last kilometre.",
+      "description": [
+        "Skogkoie means forest hut. There is no grid electricity here: a wood stove heats the cabin and cooks the food, solar panels power the lights, and water comes from the lake.",
+        "You park at the end of the forest road and walk the last kilometre on a marked path, or ski it in winter. Dogs are welcome. Mobile coverage is weak, which many guests count as a feature."
+      ],
+      "maxGuests": 3,
+      "bedrooms": 1,
+      "beds": "1 bunk bed, 1 single bed",
+      "features": [
+        "pets-allowed",
+        "fireplace",
+        "off-grid",
+        "lake-view"
+      ],
+      "nightlyRate": 1450,
+      "weekendRate": 1650,
+      "cleaningFee": 500,
+      "minNights": 2,
+      "geo": {
+        "latitude": 62.3,
+        "longitude": 11.95
+      },
+      "currency": "NOK",
+      "checkInTime": "16:00",
+      "checkOutTime": "11:00",
+      "image": "/images/femund-skogkoie.svg",
+      "imageAlt": "Small dark cabin among pine trees next to a lake"
+    }
+  ]
+}

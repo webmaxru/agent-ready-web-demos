@@ -1,0 +1,232 @@
+{
+  "articles": [
+    {
+      "slug": "northern-lights-from-a-cabin",
+      "title": "How to watch the northern lights from a cabin",
+      "description": "When to go, what the sky needs, and how to spend a night waiting for the aurora without freezing.",
+      "published": "2026-09-15",
+      "author": "Nordlys Cabins",
+      "tags": [
+        "northern lights",
+        "winter",
+        "Troms"
+      ],
+      "blocks": [
+        {
+          "type": "p",
+          "text": "The northern lights are the reason many guests book a cabin in the north, and the reason a few of them go home disappointed. The aurora is weather, not a show with a start time. You can improve your chances a lot, but you cannot book it."
+        },
+        {
+          "type": "h2",
+          "text": "Darkness first"
+        },
+        {
+          "type": "p",
+          "text": "In North Norway the aurora season runs from about late September to late March. Outside those months the nights are too bright, and around midsummer the sun does not set at all. Inside the season you want as many hours of darkness as possible and as few artificial lights as possible. That is why our northern cabins face away from villages and roads."
+        },
+        {
+          "type": "h2",
+          "text": "Then clear skies"
+        },
+        {
+          "type": "p",
+          "text": "The aurora happens far above the clouds, so a cloudy night hides it completely. Check the local cloud forecast before you check the aurora forecast. On the coast the weather changes quickly, and a gap in the clouds an hour away by car can be worth the drive."
+        },
+        {
+          "type": "h2",
+          "text": "How to wait"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Dress as if you will stand still for an hour, because you will.",
+            "Turn off the cabin lights and let your eyes adjust for a few minutes.",
+            "Look north and keep looking. Faint aurora often starts as a pale grey arc that a phone camera shows as green before your eyes do.",
+            "Keep a thermos of something hot by the door."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "If the sky stays dark, the cabin is still a cabin. Light the fire, play cards, and look out of the window every half hour. Many of our guests saw their best display at two in the morning, on the night they had given up."
+        }
+      ]
+    },
+    {
+      "slug": "packing-for-a-winter-cabin",
+      "title": "Packing for a winter cabin in Norway",
+      "description": "Layers, light and the small things that make a cold week comfortable.",
+      "published": "2026-10-01",
+      "author": "Nordlys Cabins",
+      "tags": [
+        "winter",
+        "packing"
+      ],
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Norwegians like to say that there is no bad weather, only bad clothes. It is a little smug, and it is also true. A winter week at a cabin is easy when you dress in layers and hard when you rely on one thick jacket."
+        },
+        {
+          "type": "h2",
+          "text": "Clothes"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "A wool base layer, top and bottom. Wool stays warm when it gets damp.",
+            "A warm middle layer, such as a fleece or a light down jacket.",
+            "A windproof and waterproof outer layer.",
+            "A hat, a buff or scarf, and two pairs of gloves, so one pair can dry.",
+            "Warm boots with a good grip. Ice cleats help on icy paths."
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "Light and power"
+        },
+        {
+          "type": "p",
+          "text": "In December and January the days in the north are short, and some days the sun does not rise at all. Bring a head torch for every person. If you stay at an off-grid cabin, bring a power bank and use the solar lights sparingly on grey days."
+        },
+        {
+          "type": "h2",
+          "text": "In the cabin"
+        },
+        {
+          "type": "p",
+          "text": "Our cabins come with bed linen, towels and firewood, so you do not need to bring those. Slippers or wool socks make the floors more pleasant. A drying rack near the stove is the most useful piece of furniture in any winter cabin, so hang wet things up as soon as you come in."
+        }
+      ]
+    },
+    {
+      "slug": "getting-there-without-a-car",
+      "title": "Getting to a Norwegian cabin without a car",
+      "description": "Trains, ferries and buses that bring you close to our cabins, and what to plan for the last stretch.",
+      "published": "2026-08-20",
+      "author": "Nordlys Cabins",
+      "tags": [
+        "travel",
+        "train",
+        "ferry"
+      ],
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Norway is a big country with a lot of public transport, but the last few kilometres to a cabin are often the hard part. Here is how our guests travel without driving."
+        },
+        {
+          "type": "h2",
+          "text": "By train"
+        },
+        {
+          "type": "p",
+          "text": "For Fjellro in Rondane, take the Dovre Line from Oslo towards Trondheim and get off at Otta. A local taxi covers the rest of the way; book it before you travel in winter. The Bergen Line from Oslo to Bergen crosses the Hardangervidda plateau and is one of the most beautiful train journeys in Europe, and from Bergen you can continue to Hardanger by bus."
+        },
+        {
+          "type": "h2",
+          "text": "By plane and ferry"
+        },
+        {
+          "type": "p",
+          "text": "For the northern cabins, most guests fly to Tromsø. Lyngen Lysthus is a drive with a short ferry crossing, so guests without a car usually arrange a transfer. For Reine Rorbu, take the ferry from Bodø to Moskenes. The rorbu is a short walk from the bus stop on the E10 road."
+        },
+        {
+          "type": "h2",
+          "text": "Plan the last stretch"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Check ferry and bus timetables for the exact day you travel. Winter and summer timetables differ.",
+            "Ask us for a taxi number if the cabin page says the last part needs one.",
+            "For Femund Skogkoie, remember that the last kilometre is a footpath, so pack in a rucksack, not a suitcase."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "right-to-roam-and-cabin-manners",
+      "title": "The right to roam and good cabin manners",
+      "description": "What Norway's allemannsretten lets you do outdoors, and the unwritten rules of staying in someone's cabin.",
+      "published": "2026-07-10",
+      "author": "Nordlys Cabins",
+      "tags": [
+        "outdoors",
+        "culture"
+      ],
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Norway has a long tradition called allemannsretten, the right to roam. It gives everyone access to uncultivated land, such as forests, mountains and the shore, as long as you treat it with care and respect the people who live there."
+        },
+        {
+          "type": "h2",
+          "text": "What the right to roam allows"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Walking and skiing on uncultivated land, including private land.",
+            "Camping for a night or two, at least 150 metres from the nearest house or cabin that people live in.",
+            "Picking berries and mushrooms for your own use.",
+            "Swimming and launching a small boat from the shore."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "From 15 April to 15 September it is generally not allowed to light fires in or near forests. Local rules can be stricter, so check before you light anything outside the cabin's own fireplace."
+        },
+        {
+          "type": "h2",
+          "text": "Cabin manners"
+        },
+        {
+          "type": "p",
+          "text": "Many Norwegian cabins have a guest book, the hytteboka, where visitors write a few lines about their stay. Read the old entries and add your own. Leave the cabin as you would like to find it: firewood stacked, dishes done and the stove cold. Take your rubbish with you if the cabin has no collection, and close the gates you open on the way."
+        }
+      ]
+    },
+    {
+      "slug": "sauna-and-winter-swimming",
+      "title": "Sauna and winter swimming: a beginner's guide",
+      "description": "How to enjoy a hot sauna and a cold dip safely, even if you have never tried it.",
+      "published": "2026-10-12",
+      "author": "Nordlys Cabins",
+      "tags": [
+        "sauna",
+        "winter",
+        "wellbeing"
+      ],
+      "blocks": [
+        {
+          "type": "p",
+          "text": "A sauna by the water is one of the best things about a Nordic cabin. The ritual is simple: heat up, cool down, rest, and repeat. The cold part is optional, and you should only do it if you feel well."
+        },
+        {
+          "type": "h2",
+          "text": "Before you start"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Never swim alone, and never after drinking alcohol.",
+            "Check the ice and the shore. Use a ladder or a safe entry point, never thin ice.",
+            "Keep a towel, a warm robe and shoes by the entry point."
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "A first round"
+        },
+        {
+          "type": "p",
+          "text": "Sit in the sauna for ten to fifteen minutes, or less if it feels too hot. Then walk calmly into the water, breathe slowly, and stay in for a few seconds to a minute. Get out, dry off and rest while your body warms up again. Two or three rounds are plenty for a first evening."
+        },
+        {
+          "type": "p",
+          "text": "If you have a heart condition or high blood pressure, ask your doctor before you try cold water swimming. The rush feels wonderful, but it is a real strain on the body, and there is no prize for staying in longest."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "note": "Seed bookings, loaded into memory at start. Totals are computed by the pricing rules.",
+  "bookings": [
+    {
+      "ref": "NC-7KQ2MD",
+      "cabin": "lyngen-lysthus",
+      "checkIn": "2027-02-10",
+      "checkOut": "2027-02-14",
+      "guests": 2,
+      "name": "Ingrid Berg",
+      "email": "ingrid@nordlys.example",
+      "memberId": "m-ingrid",
+      "status": "confirmed",
+      "createdAt": "2026-10-20T09:12:00.000Z"
+    },
+    {
+      "ref": "NC-H4WX9P",
+      "cabin": "hardanger-hytte",
+      "checkIn": "2027-07-03",
+      "checkOut": "2027-07-10",
+      "guests": 6,
+      "name": "Ingrid Berg",
+      "email": "ingrid@nordlys.example",
+      "memberId": "m-ingrid",
+      "status": "confirmed",
+      "createdAt": "2026-10-28T18:40:00.000Z"
+    },
+    {
+      "ref": "NC-3TBR6F",
+      "cabin": "fjellro",
+      "checkIn": "2027-03-05",
+      "checkOut": "2027-03-08",
+      "guests": 4,
+      "name": "Ola Nordmann",
+      "email": "ola@nordlys.example",
+      "memberId": "m-ola",
+      "status": "confirmed",
+      "createdAt": "2026-10-30T07:55:00.000Z"
+    }
+  ]
+}
