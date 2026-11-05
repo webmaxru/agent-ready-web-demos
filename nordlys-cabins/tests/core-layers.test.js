@@ -7,6 +7,8 @@ import { buildApp, formBody } from './helpers/server.js';
 
 const FIXTURES = fileURLToPath(new URL('./fixtures/layers/', import.meta.url));
 const BROKEN = fileURLToPath(new URL('./fixtures/broken-layers/', import.meta.url));
+const ORDERED = fileURLToPath(new URL('./fixtures/ordered-layers/', import.meta.url));
+const SAME_ORDER = fileURLToPath(new URL('./fixtures/same-order-layers/', import.meta.url));
 
 test('config: UPTO and VARIANT from flags and env, flags win', () => {
   assert.equal(loadConfig({ argv: [], env: {} }).upto, Infinity);
@@ -30,6 +32,41 @@ test('discovery: layers are found, sorted and filtered by UPTO', async () => {
 test('discovery: a layer whose chapter does not match its folder is rejected', async () => {
   await assert.rejects(discoverLayers(BROKEN), /says chapter 4, but its folder starts with 05/);
 });
+
+test('discovery: inside a chapter, layers run by their explicit order, not by folder name', async () => {
+  const layers = await discoverLayers(ORDERED);
+  assert.deepEqual(layers.map((l) => [l.id, l.chapter, l.order]), [['03-gamma', 3, 1], ['04-zeta', 4, 1], ['04-alpha', 4, 2]]);
+  assert.deepEqual(selectLayers(layers, { upto: 3 }).map((l) => l.id), ['03-gamma']);
+});
+
+test('discovery: two layers of one chapter with the same order are rejected', async () => {
+  await assert.rejects(discoverLayers(SAME_ORDER), /06-one and 06-two are both chapter 6, order 1/);
+});
+
+test('discovery: the real layers run in chapter, then order', async () => {
+  const layers = await discoverLayers();
+  const keys = layers.map((l) => [l.chapter, l.order]);
+  const sorted = [...keys].sort((a, b) => a[0] - b[0] || a[1] - b[1]);
+  assert.deepEqual(keys, sorted);
+  assert.deepEqual(
+    layers.filter((l) => l.chapter === 8).map((l) => l.id),
+    ['08-public-api', '08-mcp-server', '08-discovery']
+  );
+  assert.deepEqual(
+    layers.filter((l) => l.chapter === 11).map((l) => l.id),
+    ['11-commerce', '11-oauth', '11-consent']
+  );
+});
+
+for (let upto = 0; upto <= 12; upto++) {
+  test(`--upto=${upto} starts, enables only chapters 0..${upto}, and every audit passes`, async () => {
+    const { app, ctx, layers } = await buildApp({ upto });
+    assert.ok(layers.every((l) => l.chapter <= upto));
+    assert.equal((await app.request('/')).status, 200);
+    const audit = await ctx.runAudits();
+    assert.equal(audit.ok, true, JSON.stringify(audit.results.filter((r) => !r.ok)));
+  });
+}
 
 test('discovery: the real layers folder loads, and the example layer is off by default', async () => {
   const { layers } = await buildApp();

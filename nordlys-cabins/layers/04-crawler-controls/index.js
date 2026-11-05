@@ -5,6 +5,7 @@ import { tokensFor } from './agents.js';
 
 export default {
   chapter: 4,
+  order: 1,
   name: 'Crawler controls',
   description: 'robots.txt with AI crawler groups and content signals, a sitemap with lastmod, noindex on private pages',
   register(app, ctx, policy = POLICY) {

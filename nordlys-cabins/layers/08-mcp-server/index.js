@@ -1,12 +1,13 @@
 // Chapter 8: server-side tools with the Model Context Protocol.
 // Mounts a stateless MCP server (protocol 2026-07-28, TypeScript SDK v2) at /mcp.
-// It shares the booking service with the public API from Chapter 7.
+// It shares the booking service with the public API from Chapter 8.
 import { createMcpHandler, originValidationResponse } from '@modelcontextprotocol/server';
 import { createNordlysServer } from './server.js';
 import { registerNordlysTools } from './tools.js';
 
 export default {
   chapter: 8,
+  order: 2,
   name: 'MCP server',
   description: 'Remote MCP server at /mcp: four tools, guide resources and a prompt over the same booking service as the API',
 
@@ -21,7 +22,7 @@ export default {
       const ownHost = new URL(ctx.absoluteUrl(c, '/')).hostname;
       const rejected = originValidationResponse(c.req.raw, [ownHost, new URL(c.req.url).hostname]);
       if (rejected) return rejected;
-      // A later layer (Chapter 14) verifies a bearer token and stores the result
+      // A later layer (Chapter 11) verifies a bearer token and stores the result
       // with c.set('mcpAuth', authInfo). Until then every caller is anonymous.
       return handler.fetch(c.req.raw, { authInfo: c.get('mcpAuth') ?? undefined });
     });

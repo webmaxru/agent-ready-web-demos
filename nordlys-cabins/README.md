@@ -1,11 +1,11 @@
 # Nordlys Cabins
 
-The running example of *The Agent-Ready Web*: a small cabin-rental
-booking site, made agent-ready one layer per chapter.
+The running example of *Agent-Ready Websites in Action*: a small cabin-rental
+booking site, made agent-ready layer by layer, chapter by chapter.
 
 ```sh
 npm start                              # clean front end, every layer
-npm start -- --upto=6                  # the site after Chapter 6
+npm start -- --upto=5                  # the site after Chapter 5
 npm start -- --variant=legacy --upto=0 # the agent-hostile baseline
 npm test
 ```

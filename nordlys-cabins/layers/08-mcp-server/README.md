@@ -1,6 +1,6 @@
-# Layer 08: MCP server
+# Layer 08-mcp-server (Chapter 8)
 
-Chapter 8 of *The Agent-Ready Web*. Mounts a remote MCP server at `/mcp`
+Chapter 8 of *Agent-Ready Websites in Action*. Mounts a remote MCP server at `/mcp`
 (Streamable HTTP, protocol revision 2026-07-28, TypeScript SDK v2
 `@modelcontextprotocol/server` 2.4.0). It also answers 2025-era clients that
 start with `initialize`.
@@ -15,8 +15,8 @@ start with `initialize`.
 | resource | `nordlys://policies/cancellation` | |
 | prompt | `plan_cabin_trip` | |
 
-Every tool calls the booking service of Chapter 7
-(`layers/07-public-api/service.js`), so the API and the MCP server give the same
+Every tool calls the booking service of Chapter 8
+(`layers/08-public-api/service.js`), so the API and the MCP server give the same
 answers and share idempotency keys and domain events (`via: 'mcp'`).
 
 ## Adding tools from a later chapter
@@ -34,7 +34,7 @@ registerMcpTool(ctx, 'list_my_bookings', {
 }, async (args, extra) => {
   // extra = { auth, request, ctx, store, sdk }
   return { content: [{ type: 'text', text: extra.auth ? 'your bookings' : 'please sign in' }] };
-}, { owner: '14-oauth' });
+}, { owner: '11-oauth' });
 ```
 
 `registerMcpResource(ctx, name, uri, metadata, read)` and
@@ -42,7 +42,7 @@ registerMcpTool(ctx, 'list_my_bookings', {
 builds a fresh server for every request, so a tool registered at any time is
 listed on the next request, after the Chapter 8 tools (the order is stable).
 
-## Protecting /mcp (Chapter 14)
+## Protecting /mcp (Chapter 11)
 
 The SDK handler checks no token. Verify the bearer token in a middleware of your
 own layer and store the result on the request:
@@ -62,5 +62,5 @@ The value reaches every tool handler as `extra.auth` (and the SDK's own
 ```sh
 npm start -- --upto=8
 npx @modelcontextprotocol/inspector@2.13.0     # then connect to http://127.0.0.1:3000/mcp
-node --test tests/ch08-*.test.js
+node --test tests/ch08-mcp-server.test.js
 ```

@@ -1,0 +1,16 @@
+{
+  "note": "Reviewed tool definitions. Regenerate with pin-tools.mjs after a review.",
+  "tools": {
+    "search_cabins": "c7fe64dd84d7557b",
+    "check_availability": "ab97c7ce46691960",
+    "create_booking": "88719eec6045d4dc",
+    "cancel_booking": "d7de8c5fdebeea2b",
+    "find_booking": "bdb1c2b1552d8e58",
+    "get_cabin_reviews": "32aed38e126f0f06",
+    "get_booking": "12476438d422145f",
+    "list_my_bookings": "5bd23ab79d213127",
+    "cancel_my_booking": "fe785536a4adb2ad",
+    "request_booking": "a481ae7393c5a722",
+    "check_booking_request": "2e872c369e4a349f"
+  }
+}

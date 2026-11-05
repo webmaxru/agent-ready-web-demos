@@ -1,8 +1,12 @@
 // The extension point of the Nordlys MCP server.
 // Later chapters add tools, resources and prompts here without editing this
-// layer: Chapter 14 (OAuth) puts the verified caller into every handler's
-// `auth` and adds tools for signed-in guests, Chapters 16 and 17 add guarded
-// and confirmed tools.
+// layer: Chapter 7 adds find_booking (its layer runs before this one, so it
+// registers here before the server exists), Chapter 11 (OAuth) puts the
+// verified caller into every handler's `auth` and adds tools for signed-in
+// guests, Chapters 10 and 11 add guarded and confirmed tools.
+//
+// tools/list shows the server's own tools (owner 08-mcp-server) first, then the
+// tools other layers contributed, each group in registration order.
 //
 //   import { registerMcpTool } from '../08-mcp-server/registry.js';
 //   registerMcpTool(ctx, 'list_my_bookings', { description, inputSchema, annotations }, async (args, extra) => ...);
@@ -11,6 +15,7 @@
 // stateless), so anything registered here is live on the next request.
 
 const registries = new WeakMap();
+const SERVER_OWNER = '08-mcp-server';
 
 function registry(ctx) {
   let r = registries.get(ctx);
@@ -29,7 +34,7 @@ const add = (map, kind, name, entry) => {
 /**
  * Register a tool. Same arguments as McpServer.registerTool, except that the
  * handler receives a second argument: { auth, request, ctx, store, sdk }.
- * auth is whatever a later layer verified (Chapter 14), or null.
+ * auth is whatever a later layer verified (Chapter 11), or null.
  */
 export function registerMcpTool(ctx, name, config, handler, { owner = 'unknown' } = {}) {
   add(registry(ctx).tools, 'tool', name, { config, handler, owner });
@@ -45,8 +50,10 @@ export function registerMcpPrompt(ctx, name, config, build, { owner = 'unknown' 
   add(registry(ctx).prompts, 'prompt', name, { config, build, owner });
 }
 
-/** Everything registered so far, in registration order (tools/list stays deterministic). */
+/** Everything registered so far: the server's own tools first, then the others, each in registration order (tools/list stays deterministic). */
 export function mcpRegistry(ctx) {
   const r = registry(ctx);
-  return { tools: [...r.tools], resources: [...r.resources], prompts: [...r.prompts] };
+  const own = ([, e]) => e.owner === SERVER_OWNER;
+  const tools = [...r.tools];
+  return { tools: [...tools.filter(own), ...tools.filter((x) => !own(x))], resources: [...r.resources], prompts: [...r.prompts] };
 }

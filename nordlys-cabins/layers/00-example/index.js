@@ -4,6 +4,7 @@
 
 export default {
   chapter: 0,
+  order: 1,
   name: 'Example layer',
   description: 'Demonstrates every layer hook. Enabled only with NORDLYS_EXAMPLE=1.',
   enabled: (config) => config.env.NORDLYS_EXAMPLE === '1',
@@ -31,7 +32,7 @@ export default {
     // An MCP endpoint at /mcp (a stub here; Chapter 8 mounts a real MCP server).
     ctx.mcp((c) => c.json({ jsonrpc: '2.0', id: null, error: { code: -32601, message: 'The example layer has no MCP server' } }, 404));
 
-    // Middleware before auth (Chapter 15 verifies bot signatures here) and after auth.
+    // Middleware before auth (Chapter 4 verifies bot signatures here) and after auth.
     ctx.beforeAuth(async (c, next) => {
       if (c.req.header('x-example-block') === '1') return c.text('Blocked by the example layer', 403);
       await next();

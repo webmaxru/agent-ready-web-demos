@@ -5,6 +5,7 @@
 
 export default {
   chapter: 2,
+  order: 1,
   name: 'First steps',
   description: 'robots.txt, sitemap.xml and a declarative WebMCP tool on the availability form',
 

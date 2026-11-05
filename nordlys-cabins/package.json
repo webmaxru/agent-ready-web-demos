@@ -2,7 +2,7 @@
   "name": "nordlys-cabins",
   "version": "1.0.0",
   "private": true,
-  "description": "Nordlys Cabins: the running example of The Agent-Ready Web, made agent-ready one layer per chapter",
+  "description": "Nordlys Cabins: the running example of Agent-Ready Websites in Action, made agent-ready one layer per chapter",
   "license": "MIT",
   "author": "Maxim Salnikov",
   "type": "module",

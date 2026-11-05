@@ -1,0 +1,10 @@
+{
+  "name": "chapter-04-who-gets-in",
+  "private": true,
+  "type": "module",
+  "description": "Chapter 4: a test agent that signs requests with Web Bot Auth (Ed25519, RFC 9421) and serves its own key directory",
+  "scripts": {
+    "start": "node signer.mjs"
+  },
+  "license": "MIT"
+}

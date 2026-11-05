@@ -1,6 +1,6 @@
 # Chapter 3: How agents see a page
 
-Companion code for Chapter 3 of *The Agent-Ready Web*. Two scripts, one fixture.
+Companion code for Chapter 3 of *Agent-Ready Websites in Action*. Two scripts, one fixture.
 
 | File | What it does |
 |---|---|

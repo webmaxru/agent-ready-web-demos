@@ -5,6 +5,7 @@ const ldJson = /<script type="application\/ld\+json">([\s\S]*?)<\/script>/g;
 
 export default {
   chapter: 5,
+  order: 1,
   name: 'Structured data',
   description: 'schema.org JSON-LD from the same data as the pages, and an NLWeb-shaped /ask endpoint',
   register(app, ctx) {
