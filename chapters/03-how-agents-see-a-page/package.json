@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Chapter 3 of The Agent-Ready Web: the three views of a page and the agent accessibility rules",
+  "description": "Chapter 3 of Agent-Ready Websites in Action: the three views of a page and the agent accessibility rules",
   "scripts": {
     "views": "node three-views.mjs",
     "axe": "node agent-axe.mjs"

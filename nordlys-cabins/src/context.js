@@ -74,8 +74,8 @@ export function createContext({ config, store, layers = [] }) {
     config,
     /** Business logic and data: cabins, availability, prices, bookings, members, articles, FAQ. */
     store,
-    /** Layers that are enabled in this run, in order: [{ id, chapter, name, description }]. */
-    layers: layers.map(({ id, chapter, name, description }) => ({ id, chapter, name, description })),
+    /** Layers that are enabled in this run, in order: [{ id, chapter, order, name, description }]. */
+    layers: layers.map(({ id, chapter, order, name, description }) => ({ id, chapter, order, name, description })),
     /** Template helpers, the same ones the core pages use. */
     html: { html, raw, escapeHtml, attrs, jsonForScript, toString },
     /** Domain events: booking.created, booking.cancelled, member.login, member.logout, contact.received. */

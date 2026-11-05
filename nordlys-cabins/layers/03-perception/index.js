@@ -39,6 +39,7 @@ export const PERCEPTION_RULES = ['html-lang', 'title', 'one-main', 'one-h1', 'no
 
 export default {
   chapter: 3,
+  order: 1,
   name: 'Perception',
   description: 'a perception contract for every public page: landmarks, headings, labels and names in the server HTML',
 

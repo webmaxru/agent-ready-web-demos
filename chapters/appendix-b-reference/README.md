@@ -18,4 +18,4 @@ npm test -w chapters/appendix-b-reference
 
 Node.js 24 or later, no dependencies beyond the Nordlys Cabins workspace.
 A "yes" means the path answered 200 or the header is present. It does not
-validate the content: Chapters 4 to 15 and the graders do that.
+validate the content: the chapters and the graders do that.

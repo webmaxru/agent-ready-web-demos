@@ -1,11 +1,11 @@
 # Chapter 2: Your first agent-ready page
 
-Demos for Chapter 2 of *The Agent-Ready Web* by Maxim Salnikov. The chapter layer
+Demos for Chapter 2 of *Agent-Ready Websites in Action* by Maxim Salnikov. The chapter layer
 itself lives in [`nordlys-cabins/layers/02-first-steps/`](../../nordlys-cabins/layers/02-first-steps/).
 
 | File | What it does |
 | --- | --- |
-| `agent-ready-check.mjs` | A local, dependency-free re-implementation of the checks isitagentready.com documents (its `llms-full.txt`, read 2 November 2026), with the same check ids and level rules. Works against any origin, including `http://localhost`, which the real scanner cannot reach. Chapter 18 reuses it in CI. |
+| `agent-ready-check.mjs` | A local, dependency-free re-implementation of the checks isitagentready.com documents (its `llms-full.txt`, read 2 November 2026), with the same check ids and level rules. Works against any origin, including `http://localhost`, which the real scanner cannot reach. Chapter 12 reuses it in CI. |
 | `booking-walk.mjs` | A structure-only "agent" built with Playwright: it tries to book a cabin by finding every control by role and accessible name, the way agents that read the accessibility tree do, and reports each step. |
 
 ## Run it

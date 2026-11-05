@@ -2,7 +2,7 @@
  * Runtime configuration from CLI flags and environment variables.
  * CLI flags win over environment variables.
  *
- *   --upto=NN      / UPTO=NN          enable layers for chapters <= NN ("all" = every layer, the default)
+ *   --upto=NN      / UPTO=NN          enable every layer of chapters 0..NN ("all" = every layer, the default)
  *   --variant=V    / VARIANT=V        "clean" (default) or "legacy" front end for the booking flow
  *   --port=N       / PORT=N           port to listen on (default 3000, 0 = any free port)
  *   --host=H       / HOST=H           interface to bind (default 127.0.0.1)

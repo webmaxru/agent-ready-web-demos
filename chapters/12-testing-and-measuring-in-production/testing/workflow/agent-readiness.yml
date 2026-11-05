@@ -1,0 +1,77 @@
+# Agent-readiness checks for Nordlys Cabins (Chapter 12).
+# Copy this file to .github/workflows/agent-readiness.yml at the repository root.
+# Every step also runs locally: see chapters/12-testing-and-measuring-in-production/testing/README.md.
+name: Agent readiness
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '17 5 * * 1'   # weekly, to catch drift in tools and graders
+
+permissions:
+  contents: read
+
+concurrency:
+  group: agent-readiness-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  agent-readiness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      NORDLYS_URL: http://127.0.0.1:4318
+      CHAPTER: chapters/12-testing-and-measuring-in-production/testing
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Chromium for Playwright and Lighthouse
+        run: npx playwright install --with-deps chromium
+
+      - name: Unit tests of the checks
+        run: npm run test:unit -w $CHAPTER
+
+      - name: Start Nordlys Cabins
+        run: |
+          node nordlys-cabins/server.js --port=4318 --now=2026-11-10 > server.log 2>&1 &
+          for i in $(seq 1 30); do curl -fs $NORDLYS_URL/ > /dev/null && exit 0; sleep 1; done
+          cat server.log; exit 1
+
+      - name: Readiness checks (isitagentready-style, against the baseline)
+        run: npm run check:readiness -w $CHAPTER -- $NORDLYS_URL
+
+      - name: Structured data
+        run: npm run check:schema -w $CHAPTER -- $NORDLYS_URL
+
+      - name: robots.txt and llms.txt
+        run: npm run check:robots -w $CHAPTER -- $NORDLYS_URL
+
+      - name: Lighthouse Agentic Browsing (median of 3, against the budget)
+        run: |
+          export CHROME_PATH=$(node -e "console.log(require('playwright').chromium.executablePath())")
+          npm run check:lighthouse -w $CHAPTER -- $NORDLYS_URL
+
+      - name: Agent paths with Playwright
+        run: npm run test:e2e -w $CHAPTER
+
+      - name: Keep the reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: agent-readiness-reports
+          path: |
+            ${{ env.CHAPTER }}/lighthouse-agentic-report.json
+            ${{ env.CHAPTER }}/playwright-report.json
+            ${{ env.CHAPTER }}/test-results/
+            server.log
+          if-no-files-found: ignore

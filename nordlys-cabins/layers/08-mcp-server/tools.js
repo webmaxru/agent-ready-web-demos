@@ -1,8 +1,8 @@
 // The Nordlys tools, resources and prompt. Every handler calls the same
-// booking service as the public API (layers/07-public-api/service.js).
+// booking service as the public API (layers/08-public-api/service.js).
 import * as z from 'zod/v4';
 import { ResourceTemplate } from '@modelcontextprotocol/server';
-import { bookingService } from '../07-public-api/service.js';
+import { bookingService } from '../08-public-api/service.js';
 import { registerMcpTool, registerMcpResource, registerMcpPrompt } from './registry.js';
 
 const OWNER = { owner: '08-mcp-server' };

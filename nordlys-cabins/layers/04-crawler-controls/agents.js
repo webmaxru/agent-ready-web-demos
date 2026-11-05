@@ -11,7 +11,6 @@ export const AGENTS = [
   { token: 'Applebot-Extended', vendor: 'Apple', purpose: 'training', robots: 'control token, no crawler', doc: 'https://support.apple.com/en-us/119829' },
   { token: 'CCBot', vendor: 'Common Crawl', purpose: 'training', robots: 'honours', doc: 'https://commoncrawl.org/ccbot' },
   { token: 'MistralAI-Training', vendor: 'Mistral AI', purpose: 'training', robots: 'honours', doc: 'https://docs.mistral.ai/robots' },
-  { token: 'Meta-ExternalAgent', vendor: 'Meta', purpose: 'training', robots: 'unverified', doc: 'https://developers.facebook.com/documentation/sharing/webmasters/web-crawlers' },
 
   // Search: builds an index that AI answers and search results link back to
   { token: 'OAI-SearchBot', vendor: 'OpenAI', purpose: 'search', robots: 'honours', doc: 'https://platform.openai.com/docs/bots' },

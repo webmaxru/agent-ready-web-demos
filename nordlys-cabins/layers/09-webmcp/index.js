@@ -6,6 +6,7 @@
 
 export default {
   chapter: 9,
+  order: 1,
   name: 'WebMCP',
   description: 'Declarative tools on the forms, imperative tools in the page, JSON endpoints for them',
   enabled: (config) => config.variant === 'clean',

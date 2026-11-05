@@ -1,0 +1,13 @@
+{
+  "name": "chapter-07-designing-tools-agents-can-use",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Chapter 7: an eval harness that runs a task suite against two Nordlys tool sets with real models",
+  "license": "MIT",
+  "scripts": {
+    "test:unit": "node --test",
+    "eval": "node eval.mjs",
+    "lint": "node lint.mjs"
+  }
+}

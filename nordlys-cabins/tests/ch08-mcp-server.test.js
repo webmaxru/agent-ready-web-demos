@@ -16,12 +16,13 @@ async function connect(app, mode = 'auto') {
   return client;
 }
 
-test('a 2026-07-28 client discovers four tools with honest annotations, in a stable order', async () => {
+test('a 2026-07-28 client discovers the four Chapter 8 tools, then find_booking from Chapter 7, with honest annotations, in a stable order', async () => {
   const { app } = await buildApp({ upto: 8 });
   const client = await connect(app);
   assert.equal(client.getProtocolEra(), 'modern');
   const { tools } = await client.listTools();
-  assert.deepEqual(tools.map((t) => t.name), ['search_cabins', 'check_availability', 'create_booking', 'cancel_booking']);
+  // The server's own four tools come first. Chapter 7's layer (on for every --upto >= 7) adds find_booking.
+  assert.deepEqual(tools.map((t) => t.name), ['search_cabins', 'check_availability', 'create_booking', 'cancel_booking', 'find_booking']);
   const byName = Object.fromEntries(tools.map((t) => [t.name, t]));
   assert.equal(byName.search_cabins.annotations.readOnlyHint, true);
   assert.equal(byName.cancel_booking.annotations.destructiveHint, true);
@@ -89,7 +90,7 @@ test('a 2025-11-25 client (initialize handshake) is served from the same endpoin
   const client = await connect(app, null);
   assert.equal(client.getProtocolEra(), 'legacy');
   const { tools } = await client.listTools();
-  assert.equal(tools.length, 4);
+  assert.equal(tools.length, 5); // the four Chapter 8 tools and find_booking (Chapter 7)
   await client.close();
 });
 

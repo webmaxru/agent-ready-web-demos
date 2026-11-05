@@ -17,11 +17,14 @@ nordlys-cabins/tests/chNN-*.spec.js   Playwright tests for the layer (browser)
 ```
 
 `NN` is the two-digit chapter number. `slug` is lowercase letters, digits and dashes.
+A chapter can have more than one layer (Chapter 8 has `08-public-api`,
+`08-mcp-server` and `08-discovery`); they share the `NN` and differ in `order`.
 
 ```js
 // layers/04-crawler-controls/index.js
 export default {
   chapter: 4,                         // must match the folder's NN
+  order: 1,                           // position inside the chapter (default 1)
   name: 'Crawler controls',           // short human name
   description: 'robots.txt with AI crawler rules and content signals',
   enabled: true,                      // optional: boolean or (config) => boolean, default true
@@ -33,13 +36,49 @@ export default {
 
 ## Which layers run
 
-The server finds every `layers/NN-slug/index.js`, sorts them by chapter and folder
-name, and enables those with `chapter <= UPTO` whose `enabled` flag is true.
+The server finds every `layers/NN-slug/index.js`, sorts them by `chapter`, then by
+`order`, then by folder name, and enables every layer of chapters 0 to `UPTO`
+whose `enabled` flag is true.
+
+`order` is a positive integer: the layer's position inside its chapter. It is
+explicit because alphabetical folder order is not the order a chapter builds
+things in (`08-public-api` comes before `08-mcp-server`, which comes before
+`08-discovery`). It defaults to 1, and two layers of the same chapter with the
+same `order` stop the server with an error. The layers today:
+
+| Chapter | Order | Folder |
+| --- | --- | --- |
+| 0 | 1 | `00-example` |
+| 2 | 1 | `02-first-steps` |
+| 3 | 1 | `03-perception` |
+| 4 | 1 | `04-crawler-controls` |
+| 4 | 2 | `04-bot-identity` |
+| 5 | 1 | `05-structured-data` |
+| 5 | 2 | `05-agent-content` |
+| 7 | 1 | `07-tool-design` |
+| 8 | 1 | `08-public-api` |
+| 8 | 2 | `08-mcp-server` |
+| 8 | 3 | `08-discovery` |
+| 9 | 1 | `09-webmcp` |
+| 10 | 1 | `10-security` |
+| 11 | 1 | `11-commerce` |
+| 11 | 2 | `11-oauth` |
+| 11 | 3 | `11-consent` |
+| 12 | 1 | `12-agent-analytics` |
+
+A layer may build on a layer of a *later* chapter, as long as it does nothing
+visible until that layer is on. Chapter 7's `07-tool-design` is the example: it
+adds `find_booking` to the MCP registry (`layers/08-mcp-server/registry.js`),
+which the Chapter 8 server reads on every request, and its lint audit runs only
+when `08-mcp-server` is enabled. So `--upto=7` serves the same pages and files as
+`--upto=5` (only `/__audit` shows the lint waiting for an MCP server), and the
+tool and the lint appear from `--upto=8`. `tests/core-layers.test.js` starts the
+site with every `--upto` from 0 to 12 and checks that all audits pass.
 
 | Command | Front end | Layers |
 | --- | --- | --- |
 | `npm start` | clean | all |
-| `npm start -- --upto=6` or `UPTO=6 npm start` | clean | chapters 0 to 6 |
+| `npm start -- --upto=8` or `UPTO=8 npm start` | clean | every layer of chapters 0 to 8 |
 | `npm start -- --variant=legacy --upto=0` (`npm run start:baseline`) | legacy | none (the Chapter 2 baseline) |
 | `npm run start:legacy` | legacy | all |
 
@@ -54,7 +93,7 @@ A layer that only makes sense for one front end checks `ctx.config.variant`
 
 ## Order and precedence
 
-Layers register in chapter order, after the core routes. The core reads every hook
+Layers register in chapter order (and `order` inside a chapter), after the core routes. The core reads every hook
 registry **at request time**, so a layer can rely on the hooks of earlier
 chapters, and where two layers set the same thing, the later chapter wins:
 
@@ -230,7 +269,7 @@ ctx.events.on('booking.created', (booking, { via, c }) => { /* via: 'form' | 'le
 ```
 
 A layer that creates or cancels bookings through its own interface (an API, MCP)
-should emit the same events with its own `via`, so analytics (Chapter 19) see every channel.
+should emit the same events with its own `via`, so analytics (Chapter 12) see every channel.
 
 ## Testing a layer
 

@@ -1,0 +1,12 @@
+{
+  "name": "chapter-06-choosing-the-right-agent-interface",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Chapter 6: a decision helper that prints a staged adoption plan per site type",
+  "license": "MIT",
+  "scripts": {
+    "test:unit": "node --test",
+    "decide": "node decide.mjs"
+  }
+}

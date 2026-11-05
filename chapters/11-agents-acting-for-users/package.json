@@ -1,0 +1,10 @@
+{
+  "name": "chapter-11-agents-acting-for-users",
+  "private": true,
+  "type": "module",
+  "description": "Chapter 11: a command-line agent that connects to a Nordlys member account with OAuth 2.1 and PKCE",
+  "scripts": {
+    "start": "node agent.mjs"
+  },
+  "license": "MIT"
+}
